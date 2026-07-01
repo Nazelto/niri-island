@@ -1,0 +1,71 @@
+window.island-window,
+window.island-window.background {
+  background: transparent;
+}
+
+window.island-window > contents,
+window.island-window > contents > * {
+  background: transparent;
+}
+
+#island {
+  background-color: rgba(17, 17, 27, 0.72);
+  color: #cdd6f4;
+
+  border: 1px solid rgba(137, 180, 250, 0.55);
+  border-radius: 999px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18),
+              0 0 10px rgba(137, 180, 250, 0.16);
+
+  margin: 10px;
+  padding: 10px 18px;
+  min-width: 260px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: min-width 180ms ease-out,
+              background-color 180ms ease-out,
+              box-shadow 180ms ease-out;
+}
+
+#island.expanded {
+  min-width: 420px;
+  background-color: rgba(17, 17, 27, 0.86);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.22),
+              0 0 14px rgba(137, 180, 250, 0.22);
+}
+
+#icon {
+  color: #89b4fa;
+  font-size: 18px;
+}
+
+#island-top-row {
+  min-width: 0;
+  min-height: 0;
+}
+
+#spectrum-row {
+  min-width: 0;
+  min-height: 0;
+  margin-top: 0;
+  opacity: 0;
+  transition: margin-top 180ms ease-out,
+              opacity 160ms ease-out;
+}
+
+#island.expanded #spectrum-row {
+  margin-top: 8px;
+  opacity: 1;
+}
+
+#subtext {
+  color: #a6adc8;
+  font-size: 12px;
+}
+
+#spectrum {
+  min-width: 128px;
+  min-height: 28px;
+}
